@@ -1,11 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.urls import path, include
-
-from django.shortcuts import render
+from .models import Tour
+# from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("First Manouna App")
+    tours = Tour.objects.all() #storing all objects that are instances of Tour Class
+
+    context = {'tours':tours}
+
+
+    # return HttpResponse("First Manouna App") #rendering a string
     # return HttpResponse(include('firstapp.home-page.html')) #deprecated
-    # return render(None, 'firstapp/home-page.html') #mesh naf3a
+    # return render(request, 'tours/index.html')
+    return render(request, 'tours/index.html', context)
