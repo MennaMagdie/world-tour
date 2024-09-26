@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Form</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+<!-- The <form> tag tells the browser that all the input fields inside the form are related and should be submitted together when the user presses the submit button. -->
+
+
+    <!-- Without a form, the input fields (like text boxes, checkboxes, etc.) would just display on the page, but there would be no way to send the user's input anywhere.
+
+When a form is submitted, the browser takes all the data the user entered (like name, email, etc.), organizes it into key-value pairs (e.g., name=JohnDoe, email=johndoe@example.com), and sends it to the server for processing. -->
+
+    <form action="" method="POST">
+        <!-- Name Field -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+
+        <!-- Message Field -->
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

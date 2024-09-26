@@ -1,0 +1,24 @@
+{% load static %}
+
+<!-- Django’s static tag automatically
+  generates the correct URL for static files
+   based on the configuration in settings.py. -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+    <head>
+        <title>HOME</title>
+        <!-- <link rel="'stylesheet" href="{% static 'styles/styles.css' %}"> -->
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+    </head>
+    <body>
+            <!-- <p>hey?</p> -->
+            <div class="centered-content">
+                <img class="logo" src="{% static 'images/image.png' %}" alt="logo"> <!-- width="500px" -->
+
+                <form action="{% url 'contact' %}" method="GET">
+                        <button type="submit" class="btn">Click to Enter Form</button>
+                </form>
+            </div>
+    </body>
+   </html>
